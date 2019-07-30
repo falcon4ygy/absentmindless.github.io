@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- saved from url=(0163)https://tiddlydrive.github.io/?state=%7B%22ids%22:%5B%221mdWo5z5xxvUi7CD-3-3Z6EGjSf1ShXQ9%22%5D,%22action%22:%22open%22,%22userId%22:%22102544800862716461191%22%7D -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title id="top-title">absentmindless — a non-linear personal web notebook</title>
+    
+    <link type="text/css" rel="stylesheet" href="./absentmindless_files/index.css">
+    <link rel="stylesheet" href="./absentmindless_files/materialize.min.css">
+    <link rel="stylesheet" href="./absentmindless_files/icon.css">
+    <script src="./absentmindless_files/cb=gapi.loaded_0" async=""></script><script src="./absentmindless_files/jquery.min.js.download"></script>
+    <script src="./absentmindless_files/materialize.min.js.download"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script charset="utf-8" src="./absentmindless_files/moment_timeline_tweet.fcad8ea2acff297a366cdbcbb2a39c03.js.download"></script><script charset="utf-8" src="./absentmindless_files/timeline.49693ebcd57b08708ebca7502c7c343d.js.download"></script></head>
+  <body>
+    <div class="modal-content grey-text text-darken-2" id="error-msg">
+      <h1>There was an error downloading the file</h1>
+    </div>
+    <div class="modal-content grey-text text-darken-3" id="nofile-msg">
+      <h3>Open a file from <a href="http://drive.google.com/">Google Drive <img src="./absentmindless_files/drive-logo.png"></a> by adding the Tiddly Drive addon.</h3>
+      <p>For detailed instructions to install, check the <a href="https://lordratte.gitlab.io/tiddlydrive">info page</a></p>
+    </div>
+    <div class="progress" id="loader" style="display: none;">
+        <div class="indeterminate"></div>
+    </div>
+    <iframe id="content" src="./absentmindless_files/saved_resource.html"></iframe>
+    <div class="fixed-action-btn">
+      <a id="open-settings" class="btn-floating btn-large modal-trigger waves-effect waves-light grey" href="https://tiddlydrive.github.io/?state=%7B%22ids%22:%5B%221mdWo5z5xxvUi7CD-3-3Z6EGjSf1ShXQ9%22%5D,%22action%22:%22open%22,%22userId%22:%22102544800862716461191%22%7D#settings"><i class="material-icons">settings</i></a>
+    </div>
+
+    <div id="nonprod-warning" class="modal" style="z-index: 1003;">
+      <div class="modal-content">
+        <h4>Development Version</h4>
+        <p><strong>Warning:</strong> this is a development version of TiddlyDrive. It may contain untested features. If you meant to go to the stable app, you can find it at <a href="https://tiddlydrive.github.io/">https://tiddlydrive.github.io</a></p>
+      </div>
+      <div class="modal-footer">
+        <a class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
+      </div>
+    </div>
+
+    <div id="dlg-warning" class="modal" style="z-index: 1005;">
+      <div class="modal-content">
+        <h4 id="dlg-warning-title"></h4>
+        <p id="dlg-warning-body"></p>
+      </div>
+      <div class="modal-footer">
+        <a class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
+      </div>
+    </div>
+
+    <div id="settings" class="modal modal-fixed-footer" style="z-index: 1007;">
+      <div class="modal-content">
+        <br style="display: block;line-height: 100px;">
+        <h4 class="z-depth-1 floating-title">Tiddly Drive Settings<br>
+	       <img src="./absentmindless_files/development.svg" style="max-width:100%;" class="dev">
+	       <img src="./absentmindless_files/tiddlydrive.github.io.svg" style="max-width: 100%; display: inline;" class="prod">
+        </h4> 
+        <h5 class="tooltipped legacy-mode" data-tooltip="Firefox doesn&#39;t currently support certain features" data-tooltip-id="a47ab3cb-d9ff-9543-6a56-92fb35217552">Legacy Mode <i class="material-icons">info outline</i></h5><i class="legacy-mode">(<a href="https://lordratte.gitlab.io/tiddlydrive/#which-browsers-are-supported">see official page</a>)</i>
+        <p>
+          </p><div class="row">
+            <div class="col s12">
+	      <ul class="tabs"> <!-- Settings Tabs -->
+                <li class="tab col s3"><a href="https://tiddlydrive.github.io/?state=%7B%22ids%22:%5B%221mdWo5z5xxvUi7CD-3-3Z6EGjSf1ShXQ9%22%5D,%22action%22:%22open%22,%22userId%22:%22102544800862716461191%22%7D#options" class="active">Options</a></li>
+                <li class="tab col s3"><a href="https://tiddlydrive.github.io/?state=%7B%22ids%22:%5B%221mdWo5z5xxvUi7CD-3-3Z6EGjSf1ShXQ9%22%5D,%22action%22:%22open%22,%22userId%22:%22102544800862716461191%22%7D#about">About</a></li>
+                <li class="tab col s3"><a href="https://tiddlydrive.github.io/?state=%7B%22ids%22:%5B%221mdWo5z5xxvUi7CD-3-3Z6EGjSf1ShXQ9%22%5D,%22action%22:%22open%22,%22userId%22:%22102544800862716461191%22%7D#news">News</a></li>
+              <li class="indicator"></li></ul>
+            </div>
+            <div id="options" class="col s12 active">
+              <div class="container">
+                <div class="row">
+                  <div class="col s12">
+                    <h5>Saving</h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12">
+                    <input type="checkbox" id="enable-hotkey-save" checked="checked">
+                    <label for="enable-hotkey-save">Save with <i>Ctrl</i> + <i>s</i> <b>or</b> <i>Ctrl</i> + <i>Shift</i> + <i>s</i></label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Not recommended for large files" data-tooltip-id="b94e5fd6-685e-7083-7465-bbcee4dbf28e">
+                    <input type="checkbox" id="enable-autosave" checked="checked">
+                    <label for="enable-autosave">Enable autosave</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Override the save-to-drive functionality and save normally" data-tooltip-id="30ceb5da-42dd-82ba-cca8-e9639a8dd61e">
+                    <input type="checkbox" id="disable-save" checked="unchecked">
+                    <label for="disable-save">Use download saver</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12">
+                    <h5>Connection</h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12">
+                    <a class="waves-effect waves-light btn" id="auth">Authenticate</a>
+                    <label for="auth">(Use to renew authentication details)</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="about" class="col s12" style="display: none;">
+              <p>Thanks for using Tiddly Drive. The project is open source and license can be found <a href="https://tiddlydrive.github.io/LICENSE.md" target="_blank">here</a>. If you would like to contribute, the repository is <a href="https://github.com/tiddlydrive/tiddlydrive.github.io" target="_blank">here</a>.<br>
+                 If you like my work, you can donate to me via Bitcoin: 1KWgrQZM1mTrzoo6GKo1ijTbXPSWcaVRbY <i class="material-icons">favorite</i></p>
+            </div>
+	    <div id="news" class="col s12" style="display: none;">
+            <!-- Twitter feed -->
+            <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-timeline twitter-timeline-rendered" data-widget-id="profile:Lord_Ratte" title="Twitter Timeline" style="position: static; visibility: visible; display: inline-block; width: 100%; padding: 0px; border: none; max-width: 100%; min-width: 180px; margin-top: 0px; margin-bottom: 0px; min-height: 200px; height: 0px;" src="./absentmindless_files/saved_resource(1).html"></iframe> <script async="" src="./absentmindless_files/widgets.js.download" charset="utf-8"></script>
+	    </div>
+          </div>
+        <p></p>
+      </div>
+      <div class="modal-footer">
+        <a id="hide-fab" class="modal-action modal-close waves-effect waves-green btn-flat">Hide settings button until next reload</a>
+        <a class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
+    <script type="text/javascript" src="./absentmindless_files/index.js.download"></script>
+    <script async="" defer="" src="./absentmindless_files/api.js.download" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === &#39;complete&#39;) this.onload()" gapi_processed="true">
+    </script>
+  
+
+<div class="material-tooltip" id="a47ab3cb-d9ff-9543-6a56-92fb35217552"><span>Firefox doesn't currently support certain features</span><div class="backdrop"></div></div><div class="material-tooltip" id="b94e5fd6-685e-7083-7465-bbcee4dbf28e"><span>Not recommended for large files</span><div class="backdrop"></div></div><div class="material-tooltip" id="30ceb5da-42dd-82ba-cca8-e9639a8dd61e"><span>Override the save-to-drive functionality and save normally</span><div class="backdrop"></div></div><div class="hiddendiv common"></div><iframe scrolling="no" frameborder="0" allowtransparency="true" src="./absentmindless_files/widget_iframe.0639d67d95b7680840758b6833f06d87.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe id="apiproxy46045bfcd3b5ba388edf56b7192e846063832f270.183154647" name="apiproxy46045bfcd3b5ba388edf56b7192e846063832f270.183154647" src="./absentmindless_files/proxy.html" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px; display: none;"></iframe><iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" aria-hidden="true" frame-border="0" src="./absentmindless_files/iframe.html" style="position: absolute; width: 1px; height: 1px; left: -9999px; top: -9999px; right: -9999px; bottom: -9999px; display: none;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./absentmindless_files/saved_resource(2).html"></iframe></body></html>
