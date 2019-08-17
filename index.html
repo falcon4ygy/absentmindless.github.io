@@ -167,6 +167,8 @@ Error message and password prompt
 
 <li>$:/config/Plugins/Disabled/$:/plugins/TWaddle/tw-admin</li>
 
+<li>$:/config/Plugins/Disabled/$:/themes/tiddlywiki/centralised</li>
+
 <li>$:/config/Plugins/Disabled/$:/themes/tiddlywiki/seamless</li>
 
 <li>$:/config/Plugins/Disabled/$:/themes/tiddlywiki/starlight</li>
@@ -179,11 +181,17 @@ Error message and password prompt
 
 <li>$:/config/Toolbar/Text</li>
 
+<li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/close</li>
+
+<li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/edit</li>
+
 <li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/fold</li>
 
 <li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/fold-bar</li>
 
 <li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/fold-others</li>
+
+<li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/more-tiddler-actions</li>
 
 <li>$:/core</li>
 
@@ -302,6 +310,8 @@ Error message and password prompt
 <li>$:/state/tab--959111941</li>
 
 <li>$:/state/tab-1342078386</li>
+
+<li>$:/state/tab-1480004787</li>
 
 <li>$:/state/tab-1749438307</li>
 
@@ -565,6 +575,8 @@ Error message and password prompt
 
 <li>Clamping circuit</li>
 
+<li>Completed</li>
+
 <li>Components</li>
 
 <li>EE</li>
@@ -572,6 +584,10 @@ Error message and password prompt
 <li>Filters</li>
 
 <li>Flyback converter</li>
+
+<li>Games</li>
+
+<li>Ideas</li>
 
 <li>Isolation transformer</li>
 
@@ -581,11 +597,17 @@ Error message and password prompt
 
 <li>MOV</li>
 
+<li>Planning</li>
+
+<li>pØt</li>
+
 <li>Power supply circuits</li>
 
 <li>Transformers</li>
 
 <li>Triac</li>
+
+<li>Trips</li>
 
 <li>Welcome!</li>
 
@@ -644,6 +666,9 @@ Error message and password prompt
 <div created="20190730173908168" modified="20190730191957791" title="$:/config/Plugins/Disabled/$:/plugins/TWaddle/tw-admin">
 <pre>no</pre>
 </div>
+<div created="20190816193556260" modified="20190816193556260" title="$:/config/Plugins/Disabled/$:/themes/tiddlywiki/centralised">
+<pre>yes</pre>
+</div>
 <div created="20190731200859233" modified="20190731200859233" title="$:/config/Plugins/Disabled/$:/themes/tiddlywiki/seamless">
 <pre>yes</pre>
 </div>
@@ -662,13 +687,22 @@ Error message and password prompt
 <div created="20190731134555933" modified="20190731134603365" title="$:/config/Toolbar/Text">
 <pre>no</pre>
 </div>
-<div created="20190730172854847" modified="20190730172904031" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/fold">
+<div created="20190816184410460" modified="20190816184820565" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/close">
 <pre>show</pre>
+</div>
+<div created="20190816184406316" modified="20190816184822413" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/edit">
+<pre>show</pre>
+</div>
+<div created="20190730172854847" modified="20190816184408556" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/fold">
+<pre>hide</pre>
 </div>
 <div created="20190730172859743" modified="20190730172901575" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/fold-bar">
 <pre>hide</pre>
 </div>
 <div created="20190730172852432" modified="20190730172854359" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/fold-others">
+<pre>hide</pre>
+</div>
+<div created="20190816184405180" modified="20190816184405180" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/more-tiddler-actions">
 <pre>hide</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.19">
@@ -9728,8 +9762,8 @@ body.tc-body .tw-admin-content svg {
 <div created="20190730173925441" modified="20190730173925441" title="$:/state/plugin-info--1631071682-$:/plugins/tiddlywiki/internals---624540544">
 <pre>contents</pre>
 </div>
-<div created="20190730172607376" modified="20190731200825569" title="$:/state/plugin-info--270617185-$:/themes/tiddlywiki/centralised">
-<pre>no</pre>
+<div created="20190730172607376" modified="20190816184755813" title="$:/state/plugin-info--270617185-$:/themes/tiddlywiki/centralised">
+<pre>yes</pre>
 </div>
 <div created="20190731200854088" modified="20190731200854088" title="$:/state/plugin-info--270617185-$:/themes/tiddlywiki/seamless">
 <pre>yes</pre>
@@ -9743,7 +9777,7 @@ body.tc-body .tw-admin-content svg {
 <div created="20190731200826657" modified="20190731200829312" title="$:/state/plugin-info--270617185-$:/themes/tiddlywiki/vanilla">
 <pre>no</pre>
 </div>
-<div created="20190731200957033" modified="20190731201002905" title="$:/state/plugin-info--896887961-$:/core">
+<div created="20190731200957033" modified="20190816193606860" title="$:/state/plugin-info--896887961-$:/core">
 <pre>no</pre>
 </div>
 <div created="20190731134627564" modified="20190731134627564" title="$:/state/plugin-info--896887961-$:/plugins/tiddlywiki/internals">
@@ -9761,7 +9795,7 @@ body.tc-body .tw-admin-content svg {
 <div created="20190730173743608" modified="20190730192010015" title="$:/state/plugin-info-1513703614-$:/plugins/TWaddle/tw-admin---884232228">
 <pre>readme</pre>
 </div>
-<div created="20190730173941184" modified="20190730191022211" title="$:/state/plugin-info-334910430-$:/core---1812962263">
+<div created="20190730173941184" modified="20190816184722669" title="$:/state/plugin-info-334910430-$:/core---1812962263">
 <pre>contents</pre>
 </div>
 <div created="20190730160534683" modified="20190730160545211" title="$:/state/showeditpreview">
@@ -9770,19 +9804,19 @@ body.tc-body .tw-admin-content svg {
 <div created="20190730163234261" modified="20190730163258708" title="$:/state/ShowPaletteEditor">
 <pre>no</pre>
 </div>
-<div created="20190730192248353" modified="20190731134938197" tags="" title="$:/state/sidebar">
+<div created="20190816193241084" modified="20190816193524651" tags="" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20190730155109691" modified="20190801145917562" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
-<div created="20190730163140437" modified="20190731134528691" title="$:/state/tab--1963855381">
-<pre>$:/core/ui/ControlPanel/Toolbars</pre>
+<div created="20190730163140437" modified="20190816184913182" title="$:/state/tab--1963855381">
+<pre>$:/themes/tiddlywiki/vanilla/themetweaks</pre>
 </div>
 <div created="20190730165720958" modified="20190730181858858" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Advanced</pre>
 </div>
-<div created="20190730171324039" modified="20190731200954466" title="$:/state/tab--86143343">
+<div created="20190730171324039" modified="20190816193601988" title="$:/state/tab--86143343">
 <pre>$:/core/ui/ControlPanel/Plugins/Installed/Plugins</pre>
 </div>
 <div created="20190730165728294" modified="20190730181923698" title="$:/state/tab--959111941">
@@ -9791,40 +9825,43 @@ body.tc-body .tw-admin-content svg {
 <div created="20190730172407143" modified="20190730172418623" title="$:/state/tab-1342078386">
 <pre>$:/core/ui/ControlPanel/Plugins/Add/Themes</pre>
 </div>
-<div created="20190730155035283" modified="20190731201103113" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/KeyboardShortcuts</pre>
+<div created="20190816184655573" modified="20190816184657676" title="$:/state/tab-1480004787">
+<pre>$:/core/ui/MoreSideBar/Plugins/Theme</pre>
+</div>
+<div created="20190730155035283" modified="20190816193533427" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Plugins</pre>
 </div>
 <div created="20190731134613381" modified="20190731134736181" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/TiddlySpot</pre>
 </div>
-<div created="20190730155240051" modified="20190802190020323" title="$:/state/tab/sidebar--595412856">
+<div created="20190730155240051" modified="20190816195403176" title="$:/state/tab/sidebar--595412856">
 <pre>EE</pre>
 </div>
-<div created="20190730172925279" modified="20190730182000106" title="$:/state/tabs/controlpanel/toolbars-1345989671">
-<pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
+<div created="20190730172925279" modified="20190816184912254" title="$:/state/tabs/controlpanel/toolbars-1345989671">
+<pre>$:/core/ui/ControlPanel/Toolbars/EditToolbar</pre>
 </div>
 <div created="20190730182950947" modified="20190730182950947" title="$:/state/tag-manager/ee">
 <pre>open</pre>
 </div>
-<div created="20190730210953746" modified="20190801183428858" title="$:/state/toc/EE-Circuits--1834503836">
-<pre>open</pre>
+<div created="20190730210953746" modified="20190816195426424" title="$:/state/toc/EE-Circuits--1834503836">
+<pre>close</pre>
 </div>
 <div created="20190730210957946" modified="20190801135151943" title="$:/state/toc/EE-Circuits-1688563083">
 <pre>close</pre>
 </div>
-<div created="20190730210954410" modified="20190801151138860" title="$:/state/toc/EE-Components--1834503836">
-<pre>open</pre>
+<div created="20190730210954410" modified="20190816195407856" title="$:/state/toc/EE-Components--1834503836">
+<pre>close</pre>
 </div>
 <div created="20190730211000306" modified="20190801135150967" title="$:/state/toc/EE-Components-1688563083">
 <pre>close</pre>
 </div>
-<div created="20190801135338711" modified="20190801144350879" title="$:/state/toc/EE-Microcontrollers--1834503836">
+<div created="20190801135338711" modified="20190816195406792" title="$:/state/toc/EE-Microcontrollers--1834503836">
 <pre>close</pre>
 </div>
-<div created="20190731143047354" modified="20190802174601349" title="$:/state/toc/EE/Circuits-Filters--1834503836">
+<div created="20190731143047354" modified="20190816195425032" title="$:/state/toc/EE/Circuits-Filters--1834503836">
 <pre>close</pre>
 </div>
-<div created="20190731143106162" modified="20190802174559517" title="$:/state/toc/EE/Circuits-Power supply circuits--1834503836">
+<div created="20190731143106162" modified="20190816195423240" title="$:/state/toc/EE/Circuits-Power supply circuits--1834503836">
 <pre>close</pre>
 </div>
 <div created="20190801130750534" modified="20190801130750534" title="$:/state/toc/EE/Circuits-Power supply circuits-1688563083">
@@ -9845,7 +9882,7 @@ body.tc-body .tw-admin-content svg {
 <div created="20190730184456225" modified="20190730193701196" title="$:/state/toc/TableOfContents/EE/Components-Transformers--118161433">
 <pre>close</pre>
 </div>
-<div created="20190802145404385" list="Triac" modified="20190802190022363" title="$:/StoryList">
+<div created="20190816185014366" list="" modified="20190816194409206" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20190730155109691" modified="20190801151106677" title="$:/temp/advancedsearch">
@@ -9896,11 +9933,11 @@ body.tc-body .tw-admin-content svg {
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;1680&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1200&quot;
+            &quot;text&quot;: &quot;1050&quot;
         }
     }
 }</pre>
@@ -10580,7 +10617,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20190730171332808" dependents="" description="Basic theme" modified="20190730171332808" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" server-url="https://tiddlywiki.com/library/v5.1.19/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.19/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.19">
 <pre></pre>
 </div>
-<div created="20190730165023062" modified="20190801151106677" title="$:/temp/search">
+<div created="20190730165023062" modified="20190816193240147" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20190730171332801" modified="20190730171332801" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.19/index.html" url="https://tiddlywiki.com/library/v5.1.19/index.html">
@@ -10712,8 +10749,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20190730173249896" modified="20190730173257128" title="$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint">
 <pre>960px</pre>
 </div>
-<div created="20190730173108744" modified="20190730173358968" title="$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth">
-<pre>350px</pre>
+<div created="20190730173108744" modified="20190816185027559" title="$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth">
+<pre>360px</pre>
 </div>
 <div created="20190730173041465" modified="20190730190248778" title="$:/themes/tiddlywiki/vanilla/metrics/storyleft">
 <pre>0px</pre>
@@ -10730,7 +10767,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20190730185659640" modified="20190730190817419" title="$:/themes/tiddlywiki/vanilla/metrics/tiddlerwidth">
 <pre>686px</pre>
 </div>
-<div created="20190730173159872" modified="20190730190233208" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout">
+<div created="20190730173159872" modified="20190816185047478" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout">
 <pre>fixed-fluid</pre>
 </div>
 <div created="20190730182008666" modified="20190730182008666" title="$:/themes/tiddlywiki/vanilla/options/stickytitles">
@@ -10774,18 +10811,28 @@ Transistor configurations:
 * [[BJT|BJT]]
 * [[MOSFET|MOSFET]]</pre>
 </div>
-<div created="20190802184441415" modified="20190802185115459" tags="Circuits" title="Clamping circuit">
+<div created="20190802184441415" modified="20190806171218084" tags="Circuits" title="Clamping circuit">
 <pre>Take an AC signal centered on 0 V and shift it so it lies fully above or below the x-axis.
 
-Pros: simple circuit (~3 components)
-Cons: bad ripple, need small RC for charging but large RC for discharging (can be hard to find a good value, so use an active clamping circuit in this case</pre>
+Pros: simple circuit (~3 components) 
+Cons: bad ripple, need small RC for charging but large RC for discharging (can be hard to find a good value, so use an active clamping circuit in this case.</pre>
+</div>
+<div created="20190816125119300" modified="20190816141259990" tags="Trips" title="Completed">
+<pre>Journal with pictures!
+
+* [[Midwest Road Trip|Midwest Road Trip]]
+* [[Costa Rica|Costa Rica]]
+* [[Puerto Rico|Puerto Rico]]
+* [[Spain|Spain]]
+* [[China|China]]
+* [[Australia|Australia]]</pre>
 </div>
 <div created="20190730183144437" modified="20190731200431584" tags="EE" title="Components">
 <pre>* [[Transformers|Transformers]]
 * [[MOV|MOV]]
 * [[Triac|Triac]]</pre>
 </div>
-<div created="20190730182724076" list-after="$:/core/ui/SideBar/Open" modified="20190801135216639" tags="$:/tags/SideBar" title="EE">
+<div created="20190730182724076" list-after="$:/core/ui/SideBar/Recent" modified="20190816124914115" tags="$:/tags/SideBar" title="EE">
 <pre>Tiddlers related to electrical engineering, electricity and magnetism, electronics, etc.
 
 &lt;div class=&quot;tc-table-of-contents&quot;&gt;
@@ -10812,6 +10859,17 @@ A huge advantage is that the flyback transformer provides isolation and the seco
 
 
 </pre>
+</div>
+<div created="20190816124400716" modified="20190816124453379" tags="Ideas" title="Games">
+<pre></pre>
+</div>
+<div created="20190816124007819" list-after="$:/core/ui/SideBar/Recent" modified="20190816124855971" tags="$:/tags/SideBar" title="Ideas">
+<pre>Random thoughts to not lose.
+&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+
+&lt;&lt;toc-selective-expandable 'Ideas'&gt;&gt;
+
+&lt;/div&gt;</pre>
 </div>
 <div created="20190730162741685" modified="20190730184430817" tags="Transformers" title="Isolation transformer">
 <pre>Standard; primary and secondary coils are separate, but magnetic flux is linked. If secondary coil is not given a reference voltage (i.e. ground), then voltages in that coil are floating--all that we know is that there is a defined voltage ACROSS the secondary winding. This//'' isolates''// load from power source, so used it can be used to improve protection / increase safety.</pre>
@@ -10841,10 +10899,16 @@ Runs Linux. Can code in Python (somehow?)
 
 !Particle</pre>
 </div>
-<div created="20190730192829604" modified="20190730195515219" tags="protection Components" title="MOV">
-<pre>A MOV is a ''m''etal ''o''xide ''v''aristor. Used for circuit protection against voltage surges.
+<div created="20190730192829604" modified="20190806184035683" tags="protection Components" title="MOV">
+<pre>A MOV is a ''m''etal ''o''xide ''v''aristor. Used for circuit protection against voltage surges, nonpolar.
 
 When the voltage across the MOV is lesser in magnitude than the //clamping voltage// the MOV is rated for, it is nonconductive. Above the clamping voltage (i.e. when there is a surge, typically on power lines), the MOV begins to conduct. The I-V characteristics of a MOV look similar to diode knees in both positive and negative realms. If the voltage surges far beyond the clamping voltage, the MOV will (and is expected to) fail, acting like a short circuit. This is intended to make the circuit fail in a ''safe'' way.</pre>
+</div>
+<div created="20190816125023860" modified="20190816125053187" tags="Trips" title="Planning">
+<pre>Places to visit, places to stay, things to do, food to eat.</pre>
+</div>
+<div created="20190816155009447" modified="20190816155131278" tags="Ideas" title="pØt">
+<pre></pre>
 </div>
 <div created="20190730201305696" modified="20190801145647026" tags="Circuits" title="Power supply circuits">
 <pre>!! Switched-mode power supplies
@@ -10872,13 +10936,21 @@ Used to convert between different AC voltages. Convert electrical energy into ma
 [[Line output / flyback transformer|Flyback converter]]
 &quot;&quot;&quot;</pre>
 </div>
-<div created="20190731200444001" modified="20190802185909740" tags="Components" title="Triac">
+<div created="20190731200444001" modified="20190802190236156" tags="Components" title="Triac">
 <pre>Bidirectional gate-controlled &quot;diode&quot;. Can operate in all 4 quadrants of I-V graph. Useful as an AC switch. Once gate is opened, triac will continue conducting until current falls below a specified ''holding current''.
 
 Used in light dimming (forward-phase) and [[universal motor]] speed control.
 
-[img[triacivgraph.gif]]
-[img[triacstructure.svg]]</pre>
+[img[images/triacivgraph.gif]]
+[img[images/triacstructure.svg]]</pre>
+</div>
+<div created="20190816124643644" list-after="$:/core/ui/SideBar/Recent" modified="20190816125012132" tags="$:/tags/SideBar" title="Trips">
+<pre>Trip planning and log.
+&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+
+&lt;&lt;toc-selective-expandable 'Trips'&gt;&gt;
+
+&lt;/div&gt;</pre>
 </div>
 <div created="20190730155359811" modified="20190730180012562" title="Welcome!">
 <pre>''This is a Hello World tiddler.''</pre>
