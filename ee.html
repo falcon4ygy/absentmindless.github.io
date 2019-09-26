@@ -215,6 +215,8 @@ Error message and password prompt
 
 <li>Power supply circuits</li>
 
+<li>Protection Circuits</li>
+
 <li>Tests</li>
 
 <li>Tips, Tricks, Rules of Thumb</li>
@@ -9443,8 +9445,12 @@ Error message and password prompt
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[Autotransformer]]
-# [[Isolation transformer]]</pre>
+# [[BJT]]
+# [[Clamping circuit]]
+# [[Envelope detector]]
+# [[Filters]]
+# [[Power supply circuits]]
+# [[Protection Circuits]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -9479,7 +9485,7 @@ Error message and password prompt
 <div created="20190830142643007" modified="20190830142645800" title="$:/state/toc/Circuits-Filters-978292282">
 <pre>close</pre>
 </div>
-<div list="" title="$:/StoryList">
+<div created="20190926151008809" list="$:/Import" modified="20190926151024441" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9535,7 +9541,7 @@ Error message and password prompt
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
-            &quot;text&quot;: &quot;en-US&quot;
+            &quot;text&quot;: &quot;zh-CN&quot;
         }
     }
 }</pre>
@@ -9658,7 +9664,7 @@ Error message and password prompt
 <div created="20190730170331815" modified="20190730200435829" tags="Transformers" title="Autotransformer">
 <pre>Primary and secondary coils are on the //same// coil. They share some but not all of the windings (i.e. one coil that has taps in different places for primary and secondary). Main reason to use this is to minimize resistive power loss because there is less net current and fewer overall windings. However, there is no [[isolation|Isolation transformer]]. A variable autotransformer that allows one to modulate the voltage step is also called a ''variac''.</pre>
 </div>
-<div created="20190731191257775" modified="20190802154757974" tags="Circuits" title="BJT">
+<div created="20190731191257775" modified="20190921002251173" tags="Circuits" title="BJT">
 <pre>!Modes
 
 [img[images/bjtmodes.PNG]]
@@ -9668,6 +9674,8 @@ Error message and password prompt
 !!!Common Emitter
 !!!Common Collector
 !!!Darlington pair
+Helps redirect current very quickly because positive feedback forces pair into forward-active mode, acting as a shunt to provide an alternative/safer path. Used in &quot;fast-off&quot; circuits to minimize damage from short-circuit due to wiring or current spike, etc.
+
 !!!Diode connections
 
 * Shorting base and collector results in diode connection. This uses all three terminals but effectively creates a 2-terminal device. Useful for current mirrors, keeps it in forward active mode.
@@ -9676,14 +9684,16 @@ Error message and password prompt
 * Reverse-bias the base-emitter junction for Zener functionality.
 </pre>
 </div>
-<div created="20190730200922337" list="Filters [[Power supply circuits]] BJT [[Clamping circuit]]" list-after="$:/core/ui/SideBar/Recent" modified="20190830143326880" tags="$:/tags/SideBar" title="Circuits">
-<pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+<div created="20190730200922337" modified="20190731182441922" tags="EE" title="Circuits">
+<pre>Topologies of commonly used circuits:
 
-&lt;&lt;toc-selective-expandable 'Circuits'&gt;&gt;
+* [[Filters|Filters]]
+* [[Power|Power supply circuits]]
 
-&lt;/div&gt;
+Transistor configurations:
 
-</pre>
+* [[BJT|BJT]]
+* [[MOSFET|MOSFET]]</pre>
 </div>
 <div created="20190802184441415" modified="20190821132742699" tags="Circuits" title="Clamping circuit">
 <pre>Take an AC signal centered on 0 V and shift it so it lies fully above or below the x-axis.
@@ -9695,14 +9705,10 @@ See simple circuit below. If capacitor and diode are switched (diode pointing up
 
 [img[images/clampingcircuit.png]]</pre>
 </div>
-<div created="20190830143150240" list="Transformers MOV Triac" list-after="$:/core/ui/SideBar/Recent" modified="20190830143620466" tags="$:/tags/SideBar" title="Components">
-<pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
-
-&lt;&lt;toc-selective-expandable 'Components'&gt;&gt;
-
-&lt;/div&gt;
-
-</pre>
+<div created="20190730183144437" modified="20190731200431584" tags="EE" title="Components">
+<pre>* [[Transformers|Transformers]]
+* [[MOV|MOV]]
+* [[Triac|Triac]]</pre>
 </div>
 <div created="20190821132802906" modified="20190830143016976" tags="Circuits" title="Envelope detector">
 <pre>Ideal envelope effect shown below: Input is blue, output is red. Diode provides half-wave rectification, &quot;other&quot; half contributes via capacitor. See also: [[clamping circuit|Clamping circuit]].
@@ -9767,7 +9773,7 @@ When the voltage across the MOV is lesser in magnitude than the //clamping volta
 
 When they enter a desired value not in the library and a tolerance, the app returns the top 5 component combinations/topologies that come closest to the value.</pre>
 </div>
-<div created="20190730201305696" modified="20190801145647026" tags="Circuits" title="Power supply circuits">
+<div created="20190730201305696" modified="20190924145745044" tags="Circuits" title="Power supply circuits">
 <pre>!! Switched-mode power supplies
 
 Named because they use a switch to turn current on and off, charging and discharging inductors and capacitors to convert between different voltage levels.
@@ -9778,6 +9784,15 @@ Named because they use a switch to turn current on and off, charging and dischar
 * [[flyback converter|Flyback converter]]
 
 All of the above converters can operate in three different modes--continuous, critical continuous (CCT), and discontinuous (DCT). The regime of operation depends on the relationship between switching time and inductor &quot;discharge&quot; time.
+
+!! [[Protection Circuits|Protection Circuits]]</pre>
+</div>
+<div created="20190924145543780" modified="20190924145815133" tags="Circuits" title="Protection Circuits">
+<pre>!! Over-current protection (OCP)
+
+Place very low resistance ( ≤ 5 milliohms) resistors in the main current pathway. Important that these resistors are in series with the load, and &quot;upstream&quot; of anything we want to protect. Voltage drop across these resistors can be used to trip a simple op-amp comparator; this can provide a DC high or low signal to a controller that can be used to shut off different parts of the circuit. Timing (of op-amp, turn-off) is important.
+
+This is intended to protect against a short-circuit or high inrush event where the current spike is abnormally high.
 </pre>
 </div>
 <div created="20190828143952465" modified="20190828150226643" tags="EE" title="Tests">
@@ -9787,9 +9802,12 @@ Short-circuit outputs of a device to draw an obscene amount of current through t
 !!!Soft/Stiff Line Testing
 Super long (i.e. 100+ feet) line is ''soft'' because inductance of line (~500 uH) means that voltage drop across line not negligible. ''Stiff'' (~50 uH) lines are short. Test with inductors to measure voltage difference/ringing and any related issues. Line can be &quot;stiffened&quot; with (large) shunt capacitor parallel to load.</pre>
 </div>
-<div created="20190819134845067" modified="20190819135038234" tags="EE" title="Tips, Tricks, Rules of Thumb">
+<div created="20190819134845067" modified="20190926150924361" tags="EE" title="Tips, Tricks, Rules of Thumb">
 <pre>!!! Heat Dissipation
-* 100 degrees C rise for every 1 watt dissipated over 1 square inch of conductor</pre>
+* 100 degrees C rise for every 1 watt dissipated over 1 square inch of conductor
+
+!!! PCB Design
+* Place test points to enable easy board debugging. </pre>
 </div>
 <div created="20190730155601421" modified="20190801152612575" tags="Components" title="Transformers">
 <pre>!! Overview 
