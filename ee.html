@@ -197,6 +197,8 @@ Error message and password prompt
 
 <li>Components</li>
 
+<li>Diodes</li>
+
 <li>Envelope detector</li>
 
 <li>Filters</li>
@@ -208,6 +210,8 @@ Error message and password prompt
 <li>Mains power RFI filter</li>
 
 <li>Microcontrollers</li>
+
+<li>MOSFET</li>
 
 <li>MOV</li>
 
@@ -9445,12 +9449,7 @@ Error message and password prompt
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[BJT]]
-# [[Clamping circuit]]
-# [[Envelope detector]]
-# [[Filters]]
-# [[Power supply circuits]]
-# [[Protection Circuits]]</pre>
+# [[MOSFET]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -9476,7 +9475,7 @@ Error message and password prompt
 <div created="20190830143824792" modified="20190830143906296" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
-<div created="20190830125043042" modified="20190830144945753" title="$:/state/tab/sidebar--595412856">
+<div created="20190830125043042" modified="20191004183631682" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20190830143836072" modified="20190830143923329" title="$:/state/tabs/controlpanel/toolbars-1345989671">
@@ -9485,7 +9484,7 @@ Error message and password prompt
 <div created="20190830142643007" modified="20190830142645800" title="$:/state/toc/Circuits-Filters-978292282">
 <pre>close</pre>
 </div>
-<div created="20190926151008809" list="$:/Import" modified="20190926151024441" title="$:/StoryList">
+<div created="20191004183805003" list="MOSFET" modified="20191004183808339" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9546,7 +9545,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20190830143638577" modified="20190830144944098" title="$:/temp/search">
+<div created="20190830143638577" modified="20191004183811419" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20190830143826344" modified="20190830143828496" title="$:/theme">
@@ -9664,10 +9663,10 @@ Error message and password prompt
 <div created="20190730170331815" modified="20190730200435829" tags="Transformers" title="Autotransformer">
 <pre>Primary and secondary coils are on the //same// coil. They share some but not all of the windings (i.e. one coil that has taps in different places for primary and secondary). Main reason to use this is to minimize resistive power loss because there is less net current and fewer overall windings. However, there is no [[isolation|Isolation transformer]]. A variable autotransformer that allows one to modulate the voltage step is also called a ''variac''.</pre>
 </div>
-<div created="20190731191257775" modified="20190921002251173" tags="Circuits" title="BJT">
+<div created="20190731191257775" modified="20191004183458539" tags="Circuits" title="BJT">
 <pre>!Modes
 
-[img[images/bjtmodes.PNG]]
+[img[images/ee/bjtmodes.PNG]]
 
 !Configurations
 !!!Common Base
@@ -9695,7 +9694,7 @@ Transistor configurations:
 * [[BJT|BJT]]
 * [[MOSFET|MOSFET]]</pre>
 </div>
-<div created="20190802184441415" modified="20190821132742699" tags="Circuits" title="Clamping circuit">
+<div created="20190802184441415" modified="20191004183422610" tags="Circuits" title="Clamping circuit">
 <pre>Take an AC signal centered on 0 V and shift it so it lies fully above or below the x-axis.
 
 Pros: simple circuit (~3 components) 
@@ -9703,24 +9702,51 @@ Cons: bad ripple, need small RC for charging but large RC for discharging (can b
 
 See simple circuit below. If capacitor and diode are switched (diode pointing up), then the circuit becomes an [[envelope detector|Envelope detector]] instead.
 
-[img[images/clampingcircuit.png]]</pre>
+[img[images/ee/clampingcircuit.png]]</pre>
 </div>
-<div created="20190730183144437" modified="20190731200431584" tags="EE" title="Components">
+<div created="20190730183144437" modified="20191004183228314" title="Components">
 <pre>* [[Transformers|Transformers]]
 * [[MOV|MOV]]
-* [[Triac|Triac]]</pre>
+* [[Triac|Triac]]
+* [[Diodes|Diodes]]</pre>
 </div>
-<div created="20190821132802906" modified="20190830143016976" tags="Circuits" title="Envelope detector">
+<div created="20191004131355221" modified="20191004132751688" tags="Components" title="Diodes">
+<pre>P-N junction. Current flows in one direction, is blocked in the other.
+
+!!! Important Parameters
+* //forward voltage// - the voltage that it takes for a diode to start conducting
+* //breakdown voltage// - voltage in reverse bias which destroys diode and makes it conductive
+* //reverse recovery time// - time it takes to switch from conducting to non-conducting (i.e. on to off); usually desirable for this to be very small
+
+!! Types
+
+!!! Zener
+In reverse bias, able to maintain a constant voltage over very different amounts of current. This is because of sharp knee in reverse bias due to Zener effect (low voltage) and avalanche breakdown (high voltage).
+
+!!! Schottky
+Metal-semiconductor junction is often called a Schottky diode.
+
+Advantages:
+
+* Lower forward voltage drop
+* Much faster switching speed than normal diode (useful in switching power supplies)
+
+Disadvantages:
+
+* low reverse voltage (i.e. break down easily in high reverse bias)
+* high reverse current leakage (i.e. when in reverse bias, relatively large amt. of current still leaks through)</pre>
+</div>
+<div created="20190821132802906" modified="20191004183407074" tags="Circuits" title="Envelope detector">
 <pre>Ideal envelope effect shown below: Input is blue, output is red. Diode provides half-wave rectification, &quot;other&quot; half contributes via capacitor. See also: [[clamping circuit|Clamping circuit]].
 
-[img[images/envelopedetection.png]]</pre>
+[img[images/ee/envelopedetection.png]]</pre>
 </div>
 <div created="20190730211109500" modified="20190830142613664" tags="Circuits" title="Filters">
 <pre>[[Mains power RFI filter|Mains power RFI filter]]
 
 [[Envelope detector|Envelope detector]]</pre>
 </div>
-<div created="20190730201743105" modified="20190830143608656" tags="Transformers [[Power supply circuits]]" title="Flyback converter">
+<div created="20190730201743105" modified="20191004183437034" tags="Transformers [[Power supply circuits]]" title="Flyback converter">
 <pre>Wikipedia: &quot;buck-boost with the inductor split to form a transformer&quot;--on its own, this transformer is known as a //line output// or //flyback// transformer. Primary coil has power source, switch, and primary coil. Output of secondary goes through a ''flyback'' diode, charges a capacitor, and powers a load. Output is DC, input can be either.
 
 * When switch is ''on'': current builds up in primary inductor; capacitor discharges through load. Despite changing current in primary and changing voltage across capacitor, nothing through secondary inductor because current is prevented (from flying back) by flyback diode.
@@ -9729,7 +9755,7 @@ See simple circuit below. If capacitor and diode are switched (diode pointing up
 
 A huge advantage is that the flyback transformer provides isolation and the secondary winding therefore doubles as a storage inductor, reducing size+cost. Very useful / common, esp. in low power applications.
 
-[img[images/flybackonoff.png]]
+[img[images/ee/flybackonoff.png]]
 
 
 
@@ -9762,6 +9788,16 @@ Runs Linux. Can code in Python (somehow?)
 !ESP
 
 !Particle</pre>
+</div>
+<div created="20191004123920002" modified="20191004183720788" tags="Components" title="MOSFET">
+<pre>Stands for ''M''etal ''O''xide ''S''emiconductor ''F''ield ''E''ffect ''T''ransistor. Apply a control voltage to the gate to manage current flow between source and drain.
+
+!!! Small Signal Model
+
+!!! Body Diode
+Power FETs are optimized for low resistance and high current flow. Their structure inherently makes the diode between the bulk/substrate (which is usually tied to the source) and the drain significant. This allows some current to flow from source to drain (opposite of &quot;intended&quot; function) when source is at a higher potential than drain. 
+
+When powering highly inductive loads it is often advantageous to take advantage of this diode to allow current spikes to pass backwards. If the inductive reverse current is large enough to damage the FET it is better to put a [[Schottky diode|Diodes]] in parallel to protect the FET.</pre>
 </div>
 <div created="20190730192829604" modified="20190806184035683" tags="protection Components" title="MOV">
 <pre>A MOV is a ''m''etal ''o''xide ''v''aristor. Used for circuit protection against voltage surges, nonpolar.
@@ -9822,13 +9858,13 @@ Used to convert between different AC voltages. Convert electrical energy into ma
 [[Line output / flyback transformer|Flyback converter]]
 &quot;&quot;&quot;</pre>
 </div>
-<div created="20190731200444001" modified="20190830130329548" tags="Components" title="Triac">
+<div created="20190731200444001" modified="20191004183600651" tags="Components" title="Triac">
 <pre>Bidirectional gate-controlled &quot;diode&quot;. Can operate in all 4 regimes of I-V graph (see below). Useful as an AC switch. Conceptually similar to two diodes pointing towards each other with a control at the terminal in the middle. Once gate is opened, triac will continue conducting until current falls below a specified ''holding current''.
 
 Used in light dimming (forward-phase) and [[universal motor]] speed control.
 
-[img[images/triacivgraph.gif]]
-[img[images/triacstructure.svg]]</pre>
+[img[images/ee/triacivgraph.gif]]
+[img[images/ee/triacstructure.svg]]</pre>
 </div>
 <div title="Untitled">
 <pre>&lt;br class=&quot;Apple-interchange-newline&quot;&gt;</pre>
