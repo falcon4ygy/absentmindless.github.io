@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+  width="300px" height="400px" viewBox="-150 -200 300 400" >
+
+<title>Triac junction structure</title>
+
+<g style="stroke:black;stroke-width:2" >
+	<rect x="-140" y="-100" width="280" height="75" fill="#00ff00" />
+	<rect x="-140" y="-25" width="280" height="75" fill="#0033ff" />
+	<rect x="-140" y="50" width="280" height="75" fill="#00ff00" />
+	<g style="fill:#0033ff">
+		<rect x="-30" y="-100" width="30" height="40" />
+		<rect x="60" y="-100" width="80" height="60" />
+		<rect x="-140" y="85" width="90" height="40" />
+	</g>
+	<g style="fill:black">
+		<rect x="-135" y="-115" width="70" height="15" />
+		<rect x="-30" y="-110" width="55" height="10" />
+		<rect x="70" y="-120" width="70" height="20" />
+		<rect x="-130" y="125" width="260" height="15" />
+	</g>
+	<path d="M-100,-115 v-50 M0,-110 v-70 M105,-120 v-30 h-205 M0,140 v30" style="fill:none" />
+	<circle cx="-100" cy="-150" r="3" style="fill:black" />
+</g>
+<text font-family="DejaVu Mono" font-style="normal" font-size="14" stroke="black" stroke-width=".1">
+	<tspan x="-135" y="-170">A1 (or MT1)</tspan>
+	<tspan x="-20" y="-185">GATE</tspan>
+	<tspan x="-40" y="185">A2 (or MT2)</tspan>
+</text>
+<g fill="black">
+<text style="font-family:'DejaVu Mono'; font-style:normal; font-size:13; stroke:black; stroke-width:.1">
+	<tspan x="0" y="-35">P</tspan>
+	<tspan x="-10" y="90">P</tspan>
+</text>
+</g>
+<g fill="#ffff00">
+<text style="font-family:'DejaVu Mono'; font-style:normal; font-size:12; stroke:#ffff00; stroke-width:.1">
+	<tspan x="-20" y="-75">N</tspan>
+	<tspan x="95" y="-65">N</tspan>
+	<tspan x="-10" y="15">N</tspan>
+	<tspan x="-100" y="110">N</tspan>
+</text>
+</g>
+</svg>
