@@ -229,6 +229,8 @@ Error message and password prompt
 
 <li>Transorb</li>
 
+<li>Transorb vs. Zener vs. MOV</li>
+
 <li>Triac</li>
 
 <li>Untitled</li>
@@ -9451,7 +9453,7 @@ Error message and password prompt
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[Components]]</pre>
+# [[Transorb vs. Zener vs. MOV]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -9477,7 +9479,7 @@ Error message and password prompt
 <div created="20190830143824792" modified="20190830143906296" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
-<div created="20190830125043042" modified="20191004183631682" title="$:/state/tab/sidebar--595412856">
+<div created="20190830125043042" modified="20191031001437061" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20190830143836072" modified="20190830143923329" title="$:/state/tabs/controlpanel/toolbars-1345989671">
@@ -9486,7 +9488,7 @@ Error message and password prompt
 <div created="20190830142643007" modified="20190830142645800" title="$:/state/toc/Circuits-Filters-978292282">
 <pre>close</pre>
 </div>
-<div list="$:/Import" title="$:/StoryList">
+<div created="20191031001432114" list="$:/Import Transorb" modified="20191031002006510" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9547,8 +9549,8 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20190830143638577" modified="20191004183811419" title="$:/temp/search">
-<pre></pre>
+<div created="20190830143638577" modified="20191031001919351" title="$:/temp/search">
+<pre>transorb vs</pre>
 </div>
 <div created="20190830143826344" modified="20190830143828496" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
@@ -9867,7 +9869,7 @@ Used to convert between different AC voltages. Convert electrical energy into ma
 [[Line output / flyback transformer|Flyback converter]]
 &quot;&quot;&quot;</pre>
 </div>
-<div created="20191025123243571" modified="20191025192822132" tags="Components" title="Transorb">
+<div created="20191025123243571" modified="20191031002052508" tags="Components" title="Transorb">
 <pre>TVS (transient voltage suppression) diode, also //transil//  or //thyrector//, colloquially known as ''transorb'' b/c of trademarked //TransZorb//. Uses avalanche breakdown to protect circuitry from transient voltage spikes. 
 
 Transient voltage spikes can be caused by inductive load switching, lightning strikes, etc.
@@ -9884,7 +9886,18 @@ Current flows in opposite direction of diode during avalanche breakdown. Unidire
 
 !! Example
 
-[img[images/ee/transorbexample.png]]</pre>
+[img[images/ee/transorbusage.png]]</pre>
+</div>
+<div created="20191025131522771" modified="20191025133716772" tags="protection" title="Transorb vs. Zener vs. MOV">
+<pre>| | ![[Transorb|Transorb]] | !Zener | ![[MOV|MOV]] |
+| ''Working Principle'' | avalanche breakdown |&lt;| thermionic emission, electron tunneling |
+| ''Directionality'' | bidirecional or unidirectional | bidirectional |&lt;|
+| ''Fails as'' | short | open | short |
+| ''Capacitance'' | high | low | moderate |
+
+* Transorbs are designed for transient voltage suppression
+* Zeners are designed for voltage regulation
+</pre>
 </div>
 <div created="20190731200444001" modified="20191025131448723" tags="Components" title="Triac">
 <pre>Bidirectional gate-controlled &quot;diode&quot;. Can operate in all 4 regimes of I-V graph (see below). Useful as an AC switch. Conceptually similar to two diodes pointing towards each other with a control at the terminal in the middle. Once gate is opened, triac will continue conducting until current falls below a specified ''holding current''.
