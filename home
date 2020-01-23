@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<title>palace</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous">
+<style>
+.w3-righteous {
+  font-family: 'Righteous', cursive;
+}
+</style>
+<body>
+<div class="w3-container w3-light-gray">
+
+<h1 class="w3-center w3-righteous w3-jumbo w3-hide-small">absentmindless</h1>
+<h2 class="w3-center w3-righteous w3-hide-medium w3-hide-large">absentmindless</h2>
+  
+<a href="https://www.stwing.upenn.edu/~schal/pw/" class="w3-button w3-block w3-black w3-left-align">Master</a>
+
+<button onclick="accordion('trips')" class="w3-button w3-block w3-black w3-left-align">Trips</button>
+<div id="trips" class="w3-hide">
+  <a href="https://www.stwing.upenn.edu/~schal/australia/" class="w3-button w3-block w3-blue w3-left-align">Australia 2019</a>
+  <a href="https://www.stwing.upenn.edu/~schal/china/" class="w3-button w3-block w3-blue w3-left-align">China 2018</a>
+  <a href="https://www.stwing.upenn.edu/~schal/spain/" class="w3-button w3-block w3-blue w3-left-align">Spain 2017</a>
+</div>
+
+<button onclick="accordion('recipes')" class="w3-button w3-block w3-black w3-left-align">Recipes</button>
+<!--div id="recipes" class="w3-container w3-hide">
+  <p>Some text..</p>
+</div-->
+
+<a href="https://www.stwing.upenn.edu/~schal/eenotes/" class="w3-button w3-block w3-black w3-left-align">EE Notes</a>
+<!--button onclick="accordion('eenotes')" class="w3-button w3-block w3-black w3-left-align">EE Notes</button>
+<div id="eenotes" w3-hide">
+  <a href="https://www.stwing.upenn.edu/~schal/eenotes/" class="w3-button w3-block w3-green w3-left-align">General</a>
+  <a href="https://www.stwing.upenn.edu/~schal/eenotes/" class="w3-button w3-block w3-green w3-left-align">FE Notes</a>
+</div-->
+<button onclick="accordion('games')" class="w3-button w3-block w3-black w3-left-align">Games</button>
+<!--div id="games" class="w3-container w3-hide">
+  <p>Some text..</p>
+</div-->
+
+</div>
+<script>
+function accordion(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+</body>
+</html>
